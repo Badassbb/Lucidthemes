@@ -1,0 +1,393 @@
+/* ----- NAVBAR ----- */
+
+.liste {
+    display: inline;
+}
+
+.navbar {
+    height: 73px;
+}
+
+.logo_navbar {
+    height: 22.3px;
+    width: 110px;
+    margin-left: 2rem;
+}
+
+.icone_reseau {
+    display: inline;
+    padding-right: 10px;
+}
+
+.objet1 {
+    position: relative;
+    height: 25px;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+/* CAROUSEL / SLIDE ADAPTATION CODE */
+.carousel-caption {
+    font-family: 'Lora', serif;
+    text-align: left;
+
+}
+
+.captionpt{
+    font-size: 11px;
+}
+
+.captiongd{
+    text-align: left;
+    font-size: 24px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 55px;
+    width: 55px;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    background-color: #444444;
+}
+
+.carousel-control-prev-icon {
+    margin-left: -50px
+}
+
+.carousel-control-next-icon {
+    margin-right: -50px
+}
+
+@media (min-width: 992px) {
+
+    /* Show 4th slide on lg if col-lg-4*/
+    .carousel-inner .active.col-lg-4.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Show 3rd slide on md if col-md-6*/
+    .carousel-inner .active.col-md-6.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;
+        /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+
+    /* show 2 items */
+    .carousel-inner .active+.carousel-item {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item {
+        transition: none;
+    }
+
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* left or forward direction */
+    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+/* LG */
+@media (min-width: 992px) {
+
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active+.carousel-item+.carousel-item {
+        display: block;
+    }
+
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+        transition: none;
+    }
+
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+    .carousel-item {
+        height: 600px;
+        width: 427.275px;
+    }
+}
+
+/* debut du conteneur photos */
+.categorie {
+    font-family: 'Lora', serif;
+    left: 10%;
+    padding-top: 48%;
+    font: 21px;
+    box-sizing: border-box;
+    max-width: 100%;
+    color: #FFFFFF;
+    position: absolute;
+
+}
+
+.architext {
+    padding-left: 10%;
+    top: 88%;
+    font-family: 'Lora', serif;
+    font: 21px;
+    box-sizing: border-box;
+    max-width: 100%;
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 50;
+}
+
+/* --- IMG conteneur photo propriété dimension */
+#imgcol1 {
+    padding-bottom: 15px;
+}
+
+#imgcol2 {
+    padding-top: 15px;
+}
+
+#imgcol3 {
+    height: 100%;
+
+}
+
+#imgcol4 {
+    padding-bottom: 15px;
+}
+
+#imgcol5 {
+    padding-top: 15px;
+}
+
+/* ----CI-DESSOUS CSS pour les blocks  = ligne 221 à 303 ----*/
+/* 
+<!-- Sunrise over the Grand Canyon 7 = ligne 484--> |   <!-- Beautiful architecture in Europe 8 = ligne 520-->  |   <!-- Hidden gems you need to visit 1 = ligne 297-->
+<!-- Gondola ride through Venice 9 = ligne 553-->   |   <!-- Stunning roads across America 2 = ligne 329-->     |   <!-- Acient heritage in Japan 3 = ligne 359-->
+<!-- Stunning English coastlines 4 = ligne 391-->   |   <!-- Acient heritage in Japan 5 = ligne 418-->          |   <!-- Beautiful architecture in Europe 6 = ligne 454--> */
+
+#blocktext {
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #65645F;
+}
+
+#txt{
+    font-family: 'Open Sans', sans-serif;
+    color: #65645F;
+    font-size: 13px;
+}
+
+#blocktext a {
+    font-family: 'Lora';
+    color: #65645F;
+}
+
+#lien-ab {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'Lora', serif;
+    display: inline-flex;
+    color: #65645F;
+    text-decoration: none;
+}
+
+#h2 {
+    font-family: 'Lora', serif;
+    font-size: 28px;
+    color: #65645F;
+}
+
+#lien-a {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+}
+#lien-ab ul{
+ padding-left: 25px;
+ 
+}
+
+#lien-ab1 {
+    font-size: 13px;
+    text-transform: uppercase;
+    display: inline-flex;
+}
+
+#lien-a1 {
+    padding-right: 6px;
+    list-style: none;
+    text-decoration: none;
+}
+
+#contimgtxt {
+    padding-left: 0px;
+    margin-bottom: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#btn1 {
+    height: 41px;
+    width: 142.16px;
+    text-transform: uppercase;
+    background-color: #f9f4f0;
+    color: #d2c3be;
+    font-family: 'Lora', serif;
+    margin: 30px 0 0 0 ;
+}
+
+/* Block pagination ligne 298 à 315 */
+
+#contpagination{
+    margin-top: 40px;
+}
+.pagination a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Lora', serif;
+    color: #65645F;
+    text-decoration: none;
+    border: none;
+}
+#pagisign{
+    font-weight: bold;
+    font-size: 18px;
+}
+#vitrine{
+    background-color: #f9f4f0;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+
+}
+.contimgblock img{
+    justify-content: space-around;
+ 
+    height: 182.25px;
+    width: 182.25px;
+
+}
+.follow{
+    align-self: center;
+    display: inline-flex;
+    position: absolute;
+    display: inline;
+    padding: 8px 25px;
+    font-size: 11px;
+    font-family: 'Lora', serif;
+    color: #d2c3be;
+    background-color: #f9f4f0;
+    text-transform: uppercase;
+
+}
+.follow svg{
+    z-index: 50;
+    justify-content: center;
+}
+.follow a{
+text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #d2c3be;
+}
+#blockmultiple{
+  box-sizing: border-box;
+
+  color:#65645F;
+  font-family: 'Lora', serif;
+
+}
+#blockmultiple .col-4{
+    box-sizing: border-box;
+    height: 350px;
+    overflow: hidden;
+    }
+#contmag{
+    margin-top: 40px;
+    height: 400px;
+}
+footer{
+    height: 65.8px;
+    padding: 15px 0px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: 'Lora', serif;
+    display: inline-flex;
+    color: #d2c3be;
+    background-color: #f9f4f0;
+    text-decoration: none;
+    position: relative;
+
+}
+footer a{
+    
+    color: #d2c3be;
+    text-decoration: none;
+    
+}
